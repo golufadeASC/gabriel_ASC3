@@ -14,27 +14,33 @@ def draw():
     rect(x,450,100,20)
     line(x+50, y,x+50,y-30)
     if bullet==True:
-        y-=10
+        y-=10   
         if y<10:
-            bullet==False
-        bullet==False
+            y = 450
+            bullet=False
+    
+
+    
     
 #ship
 def keyPressed():
     global x
     global y
     global bullet
-    #right
 
     if keyCode==39 and x<478:
         x+=20
         #left
-    if keyCode==37 and x>30:
+    elif keyCode==37 and x>30:
         x-=20
     #bullet #(x, value+ constant num, x, other value + constant num)
     if keyCode==32:
         bullet=True
-    bullet==False
+
+        '''if y<0:
+                bullet=False
+                bullet = 500
+                print("hi")'''
 '''keyPressed()
 keyPressed()'''
         
